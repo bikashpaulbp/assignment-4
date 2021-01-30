@@ -25,6 +25,8 @@ document.getElementById("first-class-plus-btn").addEventListener("click", functi
     total = subTotal + tax;
 
     document.getElementById("total").innerText = total;
+
+    
     
 });
 
@@ -104,3 +106,29 @@ document.getElementById("economy-class-minus-btn").addEventListener("click", fun
     
 });
 
+
+// "Book Now" button event 
+
+document.getElementById("book-btn").addEventListener("click", function(){
+    
+    if(total > 0){
+    document.getElementById("myModal").style.display = "block";
+    document.getElementById("sub-total-modal").innerText = subTotal;
+    document.getElementById("tax-modal").innerText = tax;
+    document.getElementById("total-modal").innerText = total;
+
+    
+    }
+   
+    
+})
+
+
+// Close button event of modal
+
+document.getElementById("close-btn").addEventListener("click", function(){
+    document.getElementById("myModal").style.display = "none";
+
+    location.reload();
+      
+})
